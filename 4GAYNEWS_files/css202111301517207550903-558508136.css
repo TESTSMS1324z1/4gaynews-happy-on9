@@ -1,0 +1,38 @@
+﻿/* 整個內容方塊 */
+.indexThought-of-the-day7 {
+    
+    margin: 0;
+}
+
+    /* 內容方塊標題文字 (h2) */
+    .indexThought-of-the-day7 .blockTitle {
+    }
+
+.indexThought-of-the-day7 .textMessage
+{
+    
+    padding : 1rem;
+}
+
+.indexThought-of-the-day7 marquee
+{
+
+}
+
+.details p
+{
+    line-height : 2rem;
+    color : #08365b;
+}
+
+
+.blockTitle
+{
+    color : #b01416;   
+
+/*  黑色  /*
+/*    color : #CCCCCC;   */
+}
+
+
+

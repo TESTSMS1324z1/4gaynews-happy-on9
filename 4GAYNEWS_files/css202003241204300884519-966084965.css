@@ -1,0 +1,107 @@
+﻿/* 整個內容方塊 */
+.indexUPCOMINGEVENTS(OLD)5 {}
+
+    /* 內容方塊標題文字 (h2) */
+    .indexUPCOMINGEVENTS(OLD)5 .blockTitle a{
+    color : #08365b;
+    }
+
+/* 最新消息容器，每個最新消息都放在裡面 */
+.indexUPCOMINGEVENTS(OLD)5 .newsList
+{
+    margin : 0;
+    padding : 0;
+    border : 0 none;
+}
+
+/*單一最新消息*/
+.indexUPCOMINGEVENTS(OLD)5 .eachNews {
+    border-bottom: solid 1px #dddddd;
+    padding: 1rem;
+    display : block;
+}
+
+/*標題文字*/
+    .indexUPCOMINGEVENTS(OLD)5 .heading {
+        display : block;
+        font-weight: 700;
+        margin-bottom : 1rem;
+    }
+
+    /*小圖示*/
+    .indexUPCOMINGEVENTS(OLD)5 .newIcon {
+    }
+
+/*日期*/
+    .indexUPCOMINGEVENTS(OLD)5 .date {
+        font-size: 0.8rem;
+    }
+
+.indexUPCOMINGEVENTS(OLD)5 .details
+{
+    line-height : 2rem;
+}
+
+.indexUPCOMINGEVENTS(OLD)5 .details p
+{
+    line-height : 2rem;
+    color : #08365b;
+}
+
+/*無詳情*/
+    .indexUPCOMINGEVENTS(OLD)5 div:empty {
+        display : none;
+    }
+   
+@media (max-width: 480px) {
+    /* 只顯示頭 2 個最新消息 */
+    .indexUPCOMINGEVENTS(OLD)5 .eachNews
+    {
+        display : none;
+    }
+    .indexUPCOMINGEVENTS(OLD)5 .eachNews:nth-child(-n+2)
+    {
+        display : block;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    /* 只顯示頭 4 個最新消息 */
+    .indexUPCOMINGEVENTS(OLD)5 .eachNews
+    {
+        display : none;
+    }
+    .indexUPCOMINGEVENTS(OLD)5 .eachNews:nth-child(-n+4)
+    {
+        display : block;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    /* 只顯示頭 6 個最新消息 */
+    .indexUPCOMINGEVENTS(OLD)5 .eachNews
+    {
+display : none;
+    }
+    .indexUPCOMINGEVENTS(OLD)5 .eachNews:nth-child(-n+6)
+    {
+        display : block;
+    }
+}
+@media (min-width: 980px) and (max-width:1199px) {
+    /* 只顯示頭 8 個最新消息 */
+    .indexUPCOMINGEVENTS(OLD)5 .eachNews
+    {
+        display : none;
+    }
+    .indexUPCOMINGEVENTS(OLD)5 .eachNews:nth-child(-n+8)
+    {
+        display : block;
+    }
+}
+@media (min-width: 1200px) {
+
+}
+@media (min-width: 1200px) {
+
+}
+
+

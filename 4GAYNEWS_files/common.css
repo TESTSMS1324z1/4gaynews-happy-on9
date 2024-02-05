@@ -1,0 +1,133 @@
+﻿html {
+    scroll-behavior: smooth;
+}
+
+/* 頁內所有內容的容器 */
+div.allContent {
+    margin: 0;
+    text-align: left;
+    /*overflow: hidden;*/
+}
+
+.pageHeadingAndBanner {
+    position: relative;
+}
+
+    .pageHeadingAndBanner .editAndVideo {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+.youtubeHelp {
+}
+
+    .youtubeHelp:before {
+        content: "\f167";
+        font-family: 'Font Awesome 5 Brands';
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        font-size: 2em;
+        display: inline-block;
+        color: red;
+        vertical-align: middle;
+        background-color: #FFFFFF;
+    }
+
+/* 有指定標題樣式的標題 */
+.pageHeading {
+    margin: 0 0 1rem 0;
+}
+
+/* 頁標題 */
+.pageHeading.noStyle {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+    font-weight: 900;
+    line-height : 1em;
+}
+
+/* 段標題 */
+.paragraphHeading.noStyle {
+    margin: 0 0 1rem 0;
+    font-size: 1.5rem;
+    line-height : 1em;
+    font-weight: 800;
+}
+
+.whiteBorderText3px {
+    text-shadow: 3px 3px 0 #FFFFFF, 3px -3px 0 #FFFFFF, -3px 3px 0 #FFFFFF, -3px -3px 0 #FFFFFF, 3px 0px 0 #FFFFFF, 0px 3px 0 #FFFFFF, -3px 0px 0 #FFFFFF, 0px -3px 0 #FFFFFF;
+}
+
+.whiteBorderText2px {
+    text-shadow: 2px 2px 0 #FFFFFF, 2px -2px 0 #FFFFFF, -2px 2px 0 #FFFFFF, -2px -2px 0 #FFFFFF, 2px 0px 0 #FFFFFF, 0px 2px 0 #FFFFFF, -2px 0px 0 #FFFFFF, 0px -2px 0 #FFFFFF;
+}
+
+/* 頂部Banner */
+.customPageBanner {
+    max-width: 100%;
+}
+
+.mustNotDisplay {
+    display: none !important;
+}
+
+.enlargeFirstLetter {
+    text-indent: 0 !important;
+    display: block;
+    line-height: 1.5 !important;
+}
+
+    .enlargeFirstLetter:first-letter {
+        float: left;
+        font-size: 4em;
+        margin: -0.3em 0.1em -0.4em 0.55em;
+    }
+
+@media (max-width: 480px) {
+    .pageHeading.noStyle {
+        font-size: 1.2rem;
+    }
+
+    .paragraphHeading.noStyle {
+        font-size: 1.1rem;
+    }
+
+    .enlargeFirstLetter:first-letter {
+        font-size: 3em;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .pageHeading.noStyle {
+        font-size: 1.4rem;
+    }
+
+    .paragraphHeading.noStyle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .pageHeading.noStyle {
+        font-size: 1.6rem;
+    }
+
+    .paragraphHeading.noStyle {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 980px) and (max-width:1199px) {
+    .pageHeading.noStyle {
+        font-size: 1.8rem;
+    }
+
+    .paragraphHeading.noStyle {
+        font-size: 1.4rem;
+    }
+}
+
+

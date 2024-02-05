@@ -1,0 +1,199 @@
+﻿.index圖片播放器1 {
+    width: 100%;  /* Set width here */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+    .index圖片播放器1 .oneSlide {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        height: 30vw; /* Set height here */
+    }
+
+    /* 標題 */
+    .index圖片播放器1 .caption {
+        position: absolute;
+        bottom: 25px;
+        left: 25px;
+        padding: 10px;
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+        .index圖片播放器1 .caption:empty
+        {
+            display : none;
+        }
+
+
+        /* 超連結標題 */
+        .index圖片播放器1 .caption a {
+        }
+
+        /* 左右箭咀 */
+        .index圖片播放器1 .slick-prev,
+        .index圖片播放器1 .slick-next {
+            width: 50px; /* 箭咀大小 */
+            height: 50px; /* 箭咀大小 */
+            z-index: 1;
+        }
+
+        .index圖片播放器1 .slick-prev:before,
+        .index圖片播放器1 .slick-next:before {
+            font-size: 50px; /* 箭咀大小 */
+            opacity: .75;
+            color: white;
+        }
+
+    .index圖片播放器1 .slick-prev {
+        left: 25px;
+    }
+
+    .index圖片播放器1 .slick-next {
+        right: 25px;
+    }
+
+    /* ================================================================================== */
+
+/* Slider */
+    .index圖片播放器1 .slick-loading .slick-list {
+        background: #fff url('/App_Ecmascript/slick/ajax-loader.gif') center center no-repeat;
+    }
+
+/* Icons */
+@font-face {
+    font-family: 'slick';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/App_Ecmascript/slick/fonts/slick.eot');
+    src: url('/App_Ecmascript/slick/fonts/slick.eot?#iefix') format('embedded-opentype'), url('/App_Ecmascript/slick/fonts/slick.woff') format('woff'), url('/App_Ecmascript/slick/fonts/slick.ttf') format('truetype'), url('/App_Ecmascript/slick/fonts/slick.svg#slick') format('svg');
+}
+
+/* Arrows */
+.index圖片播放器1 .slick-prev,
+.index圖片播放器1 .slick-next {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+-ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+    .index圖片播放器1 .slick-prev:hover,
+    .index圖片播放器1 .slick-prev:focus,
+    .index圖片播放器1 .slick-next:hover,
+    .index圖片播放器1 .slick-next:focus {
+        color: transparent;
+        outline: none;
+        background: transparent;
+    }
+
+        .index圖片播放器1 .slick-prev:hover:before,
+        .index圖片播放器1 .slick-prev:focus:before,
+        .index圖片播放器1 .slick-next:hover:before,
+        .index圖片播放器1 .slick-next:focus:before {
+            opacity: 1;
+        }
+
+    .index圖片播放器1 .slick-prev.slick-disabled:before,
+    .index圖片播放器1 .slick-next.slick-disabled:before {
+        opacity: .25;
+    }
+
+    .index圖片播放器1 .slick-prev:before,
+    .index圖片播放器1 .slick-next:before {
+        font-family: 'slick';
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .index圖片播放器1 .slick-prev:before {
+        content: '←';
+    }
+
+    .index圖片播放器1 .slick-next:before {
+        content: '→';
+    }
+
+/* Dots */
+.index圖片播放器1 .slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+.index圖片播放器1 .slick-dots {
+    position: absolute;
+    bottom: -25px;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+    .index圖片播放器1 .slick-dots li {
+        position: relative;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+    }
+
+        .index圖片播放器1 .slick-dots li button {
+            font-size: 0;
+            line-height: 0;
+            display: block;
+            width: 20px;
+            height: 20px;
+            padding: 5px;
+            cursor: pointer;
+color: transparent;
+            border: 0;
+            outline: none;
+            background: transparent;
+        }
+
+            .index圖片播放器1 .slick-dots li button:hover,
+            .index圖片播放器1 .slick-dots li button:focus {
+                outline: none;
+            }
+
+                .index圖片播放器1 .slick-dots li button:hover:before,
+                .index圖片播放器1 .slick-dots li button:focus:before {
+                    opacity: 1;
+                }
+
+            .index圖片播放器1 .slick-dots li button:before {
+                font-family: 'slick';
+                font-size: 6px;
+                line-height: 20px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                content: '•';
+                text-align: center;
+                opacity: .25;
+                color: black;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+        .index圖片播放器1 .slick-dots li.slick-active button:before {
+            opacity: .75;
+            color: black;
+        }
+

@@ -1,0 +1,135 @@
+﻿:root {
+    --r-font-color : #000000;
+    --r-font-size : 16px; 
+    --r-line-height : 1.5;
+    --r-el-border-bottom: solid 1px #dddddd;
+    --r-el-padding: 1rem;
+    --r-smaller-font : 0.8em;
+    --r-container-padding : 1em;
+    --r-hori-gap : 2em;
+    --r-heading-font-weight : 700;
+    --r-heading-font-size : 1.2em;
+}
+
+.isNotIndexPage .variableContent
+{
+   padding : 1em 0;
+}
+
+
+
+body{padding:0 10px;}
+
+.blockTitle {
+    font-size : 20px !important;
+}
+
+a {
+    font-family: 'Roboto Condensed', '微軟正黑體', 'Microsoft JhengHei', 'Segoe UI Semibold', 'Segoe UI', 'Lucida Grande', Verdana, Arial, Helvetica, sans-serif;
+    text-decoration : none;
+    color: #000000;
+}
+
+.cskSchoolLogo
+{
+    height : auto;
+    margin-right : 10px;
+}
+
+.cskNameLogo
+
+
+{
+    display : flex;
+    flex-direction : row; 
+    flex-wrap : nowrap; 
+    align-items: center; 
+    justify-content: flex-start;
+}
+
+.cskFooter
+{
+    margin-top : 30px;
+    border-top : solid 1px #660000;
+}
+
+@media (max-width: 480px) 
+{
+    .cskSchoolLogo
+    {
+
+        width : 50px;
+
+
+    }
+    .cskSchoolName
+    {
+        font-size : 1.4rem;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) 
+{
+    .cskSchoolLogo
+    {
+        width : 60px;
+    }
+    .cskSchoolName
+    {
+        font-size : 1.6rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 979px) 
+{
+
+    .cskSchoolLogo
+    {
+        width : 70px;
+    }
+    .cskSchoolName
+    {
+        font-size : 1.8rem;
+    }
+}
+
+@media (min-width: 980px) and (max-width:1199px) 
+{
+  
+    .blockTitle {
+        font-size : 16px !important;
+    }
+
+    .cskSchoolLogo
+    {
+        width : 70px;
+    }
+    .cskSchoolName
+    {
+        font-size : 2rem;
+    }
+}
+@media (min-width: 1200px) and (max-width:1919px) 
+{
+    .cskSchoolLogo
+    {
+        width : 80px;
+    }
+    .cskSchoolName
+    {
+        font-size : 2.2rem;
+    }
+}
+@media (min-width: 1920px) 
+{
+    .cskSchoolLogo
+    {
+        width : 80px;
+    }
+    .cskSchoolName
+    {
+        font-size : 2.4rem;
+    }
+}
+
+
+

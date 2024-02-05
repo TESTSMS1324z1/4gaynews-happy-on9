@@ -1,0 +1,96 @@
+﻿.blueBox01 
+{
+    /*  臨時 轉黑色  */
+/*    border: 3px solid #000000;  */
+       border: 3px solid #931313;  
+
+    border-radius: 11px 40px 0px 27px;
+    padding : 2rem;
+}
+
+.csk3Columns
+{
+    display:flex;
+    flex-direction:row;
+flex-wrap:nowrap;
+align-items: stretch;
+justify-content: space-between;
+    padding : 0 30px;
+    margin-top : 4rem;
+}
+.cskColumnA
+{
+    flex-basis : 31%;
+min-width: 25%;
+/*    width: 31%;  */
+    /*background-color : #d7e6f2;*/
+
+    background-image: linear-gradient(to left bottom, #323175, #ffffff);  
+/*  臨時 轉黑色  */
+/*	 background-image: linear-gradient(to left bottom, #aaaaaa, #ffffff);   */
+}
+.cskColumnB
+{
+flex-basis : 31%;
+min-width: 25%;
+   /*background-color : #f5f97a;*/
+
+  background-image: linear-gradient(to left bottom, #F7BD51, #ffffff);   
+    /*  臨時 轉黑色  */
+/* 	background-image: linear-gradient(to left bottom, #aaaaaa, #ffffff);  */
+
+}
+.cskColumnC
+{
+    flex-basis : 31%;
+min-width: 25%;
+/*background-color : #f4d7d7;*/
+  background-image: linear-gradient(to left bottom, #C43547, #ffffff);   
+
+    /*  臨時 轉黑色  */
+/* background-image: linear-gradient(to left bottom, #aaaaaa, #ffffff);  	*/
+}
+@media (max-width: 480px)
+{
+.csk3Columns
+    {
+        display:block;
+padding : 0 5px;
+}
+    .cskColumnA, .cskColumnB, .cskColumnC
+{
+margin-bottom : 2rem;
+}
+}
+@media (min-width: 481px) and (max-width: 767px) 
+{
+    .csk3Columns
+    {
+        display:block;
+        padding : 0 10px;
+    }
+    .cskColumnA, .cskColumnB, .cskColumnC
+    {
+        margin-bottom : 2rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) 
+{
+    .csk3Columns
+    {
+        display:block;
+        padding : 0 10px;
+    }
+    .cskColumnA, .cskColumnB, .cskColumnC
+    {
+        margin-bottom : 2rem;
+    }
+}
+@media (min-width: 980px) and (max-width:1199px) {}
+@media (min-width: 1200px) and (max-width:1919px) {}
+@media (min-width: 1920px) {}
+    .indexVIRTUALCAMPUSTOUR12 .blockTitle {
+    color : #08365b;
+/* 變黑   */
+/*    color : #555555;   */
+    }

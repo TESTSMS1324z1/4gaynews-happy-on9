@@ -1,0 +1,38 @@
+﻿/* 整個內容方塊 */
+.indexSchoolLibrary8 {
+    
+    margin: 0;
+}
+
+    /* 內容方塊標題文字 (h2) */
+    .indexSchoolLibrary8 .blockTitle {
+
+/* 變黑,  原本冇 color  */
+/*    color : #555555;  */
+    }
+
+.indexSchoolLibrary8 .textMessage
+{
+    
+    padding : 1rem;
+}
+
+.indexSchoolLibrary8 marquee
+{
+
+}
+
+.details p
+{
+    line-height : 2rem;
+    color : #08365b;
+}
+
+
+.blockTitle
+{
+    color : #b01416;
+}
+
+
+

@@ -1,0 +1,37 @@
+﻿.index50THANNIVERSARY4
+{
+
+
+}
+
+.index50THANNIVERSARY4 .blockTitle
+{
+/* 變黑 */
+/*    color : #555555;*/
+    color : #b01416;    
+}
+
+@media (max-width: 480px) {
+   .index50THANNIVERSARY4 .blockTitle
+   {
+       font-size : 1.4rem;
+   }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+   .index50THANNIVERSARY4 .blockTitle
+   {
+       font-size : 1.4rem;
+   }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    
+}
+@media (min-width: 980px) and (max-width:1199px) {
+    
+}
+@media (min-width: 1200px) {
+    
+}
+
+
+

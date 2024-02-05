@@ -1,0 +1,798 @@
+﻿/* 垂直主導覽列不顯示 */
+.noVerticalMenu .lowerLeverVerticalMenu {
+    display: none;
+}
+
+/* ====================================== 垂直主導覽列 ========================================================= */
+.verticalMenuExist
+{
+    --vertical-menu-padding : 1rem;
+    --variable-content-padding : 1rem;
+}
+
+    .verticalMenuExist .fullWidthContainer {
+        width: 100%;
+    }
+
+    /* Container for left(Vertical Menu) and right(Main Content) side */
+    .verticalMenuExist .fspsFixedWidthRow {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+/* Vertical Menu */
+    .verticalMenuExist .fspsVerticalMenuPH {
+        flex-basis: 20%;
+        min-width: 200px;
+        max-width: 300px;
+        flex-grow: 1;
+        flex-shrink: 0;
+        position: relative;
+        padding: 0;
+        border: solid var(--vertical-menu-padding) transparent;
+    }
+
+/* Main Content */
+    .verticalMenuExist .variableContent
+    , .verticalMenuExist .realContent {
+        flex-basis: auto;
+        width: 80%;
+        flex-grow: 6;
+        flex-shrink: 1;
+    }
+
+    .verticalMenuExist #fspsFirstRow .variableContent {
+        padding: var(--variable-content-padding) var(--variable-content-padding) 0 var(--variable-content-padding);
+    }
+
+    .verticalMenuExist .fspsContentRow .realContent {
+        padding: 0 var(--variable-content-padding);
+    }
+
+    .verticalMenuExist .lowerLeverVerticalMenu {
+        position: absolute;
+        top: 0;
+        z-index : 1;
+        width : 100%;
+    }
+
+    .verticalMenuExist .fspsContentRow {
+        
+    }
+
+.verticalMenuExist .fspsVerticalMenuPH {
+    display: none;
+}
+
+/* === 垂直主導覽列, width 大於 768 時 ======================================== ========================================== */
+
+@media (min-width: 768px) {
+
+
+
+    /* 顯示垂直主導覽列 */
+    .verticalMenuExist .fspsVerticalMenuPH {
+        display: block;
+    }
+
+        /* reset our lists to remove bullet points and padding */
+        .verticalMenuExist .lowerLeverVerticalMenu .mainmenu, .verticalMenuExist .lowerLeverVerticalMenu .submenu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            /* make ALL links (main and submenu) have padding and background color */
+            .verticalMenuExist .lowerLeverVerticalMenu .mainmenu a {
+                display: block;
+                text-decoration: none;
+
+                    color: rgb(135,0,24);
+
+
+            }
+
+        /* 預設所有下層 submenu 都是隱藏的 */
+
+        .verticalMenuExist .lowerLeverVerticalMenu .submenu {
+            overflow: hidden;
+            max-height: 0;
+            -webkit-transition: all 0.5s ease-out;
+        }
+
+        /*當滑鼠指向menu，submenu分顯示*/
+        .verticalMenuExist .lowerLeverVerticalMenu .mainmenu li:hover > .submenu {
+            display: block;
+            max-height: 1200px; /*限制submenu的最大高度*/
+        }
+
+            .verticalMenuExist .lowerLeverVerticalMenu .mainmenu li:hover > .submenu > li:hover > .submenu {
+                display: block;
+                max-height: 1200px; /*限制submenu的最大高度*/
+            }
+
+                .verticalMenuExist .lowerLeverVerticalMenu .mainmenu li:hover > .submenu > li:hover > .submenu a {
+                    background-color: #fff;
+                    color: rgb(135,0,24);
+                }
+
+                    .verticalMenuExist .lowerLeverVerticalMenu .mainmenu li:hover > .submenu > li:hover > .submenu a:hover {
+                        color: #fff;
+/*                        background-color: rgb(70,70,70);*/
+                        background-color: rgb(199,49,72); 
+                        background-image: linear-gradient(to bottom, rgb(199,49,72), rgb(135,0,24));  
+/*                        background-image: linear-gradient(to bottom, rgb(50,50,50), rgb(70,70,70));*/
+
+                    }
+
+
+    .verticalMenuExist .lowerLeverVerticalMenu {
+        display: block;
+    }
+
+        .verticalMenuExist .lowerLeverVerticalMenu a, .verticalMenuExist .lowerLeverVerticalMenu a:hover, .verticalMenuExist .lowerLeverVerticalMenu a:focus, .verticalMenuExist .lowerLeverVerticalMenu a:active, .lowerLeverVerticalMenu a.highlighted {
+            padding: 13px 24px;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 18px;
+            text-decoration: none;
+        }
+
+        .verticalMenuExist .lowerLeverVerticalMenu .mainmenu {
+            border: 1px solid #a8a8a8;
+            padding: 7px 0;
+            background: #fff;
+            border-radius: 0 0 4px 4px !important;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+
+/*  sub page menu selected  */
+            .verticalMenuExist .lowerLeverVerticalMenu .mainmenu a:hover, .verticalMenuExist .lowerLeverVerticalMenu a.current {
+                border: 0 !important;
+                border-radius: 0 !important;
+                color: #fff;
+                background-color: rgb(184,46,66);
+                background-image: linear-gradient(to bottom, rgb(180,45,65), rgb(162,41,59));
+/*                background-image: linear-gradient(to bottom, rgb(30,30,30), rgb(50,50,50));    	*/
+
+
+            }
+
+                .verticalMenuExist .lowerLeverVerticalMenu a.current:hover {
+                        background-color: rgb(199,49,72); 
+/*                        background-color: rgb(70,70,70); */
+                    background-image: linear-gradient(to bottom, rgb(199,49,72), rgb(184,46,66));
+/*                    background-image: linear-gradient(to bottom, rgb(50,50,50), rgb(80,80,80));	*/
+
+                }
+
+                .verticalMenuExist .lowerLeverVerticalMenu a.current::after {
+                    content: "✱";
+                    margin-left: 1rem;
+                }
+
+                .verticalMenuExist .lowerLeverVerticalMenu a.current:hover::after {
+                    content: "✱";
+                    color: #FFFFFF;
+                    margin-left: 1rem;
+                }
+
+        .verticalMenuExist .lowerLeverVerticalMenu .submenu a {
+            background-color: rgb(184,46,66);
+            color: #FFFFFF;
+        }
+
+            /* hover behaviour for links inside .submenu */
+            .verticalMenuExist .lowerLeverVerticalMenu .submenu a:hover {
+                background-color: rgb(180,45,65);
+            }
+}
+
+/* 整個水平主導覽列外圍 */
+.mp主導覽列1 {
+    background-color: rgb(192,48,69); 
+/*    background-color: rgb(80,80,80); 	*/
+/* background-image: -webkit-gradient(linear, to bottom, to top, color-stop(0%, rgb(80,80,80)), color-stop(100%, rgb(50,50,50)));
+    background-image: -webkit-linear-gradient(to bottom, rgb(80,80,80), rgb(50,50,50));
+    background-image: -moz-linear-gradient(to bottom, rgb(80,80,80), rgb(50,50,50));
+    background-image: -o-linear-gradient(to bottom, rgb(80,80,80), rgb(50,50,50));
+    background-image: linear-gradient(to bottom, rgb(80,80,80), rgb(50,50,50));  */
+
+    background-image: -webkit-gradient(linear, to bottom, to top, color-stop(0%, rgb(199,49,72)), color-stop(100%, rgb(184,46,66)));
+    background-image: -webkit-linear-gradient(to bottom, rgb(199,49,72), rgb(184,46,66));
+    background-image: -moz-linear-gradient(to bottom, rgb(199,49,72), rgb(184,46,66));
+    background-image: -o-linear-gradient(to bottom, rgb(199,49,72), rgb(184,46,66));
+    background-image: linear-gradient(to bottom, rgb(199,49,72), rgb(184,46,66)); 
+
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+    .mp主導覽列1:after {
+        clear: both;
+        content: "\00a0";
+        display: block;
+        height: 0;
+        font: 0px/0 serif;
+        overflow: hidden;
+    }
+
+    /* 學校名稱 */
+    .mp主導覽列1 .schoolName {
+        float: left;
+        margin: 0;
+    }
+
+        .mp主導覽列1 .schoolName a {
+            display: block;
+            padding: 10px 10px 10px 20px;
+            color: #fff;
+            /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+            font-size: 22px;
+            font-weight: normal;
+            line-height: 29px;
+            text-decoration: none;
+        }
+
+/* ul 主導覽列節點容器 */
+#main-menu {
+    clear: both;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+/* 桌面版時不顯示學校名 */
+@media (min-width: 768px) {
+    .mp主導覽列1 .schoolName {
+        display: none;
+    }
+}
+
+/* 手機版節點容器與校名之分隔 */
+#main-menu:before {
+    content: '';
+    display: block;
+    height: 1px;
+    font: 1px/1px sans-serif;
+    overflow: hidden;
+    background-color: rgb(184,46,66);
+/*    background-color: rgb(80,80,80);	*/
+}
+
+
+/* 桌面版時不顯示節點容器與校名之分隔 */
+@media (min-width: 768px) {
+    .mp主導覽列1 #main-menu:before {
+        display: none;
+    }
+}
+
+/* 手機版, 整個主導覽列開合按鈕 */
+.mp主導覽列1 .main-menu-btn {
+    float: right;
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    text-indent: 29px;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* hamburger icon，張開用 */
+.mp主導覽列1 .main-menu-btn-icon,
+.mp主導覽列1 .main-menu-btn-icon:before,
+.mp主導覽列1 .main-menu-btn-icon:after {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    height: 2px;
+    width: 24px;
+    background: #fff;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+    .mp主導覽列1 .main-menu-btn-icon:before {
+        content: '';
+        top: -7px;
+        left: 0;
+    }
+
+    .mp主導覽列1 .main-menu-btn-icon:after {
+        content: '';
+        top: 7px;
+        left: 0;
+    }
+
+/* x icon，關閉用 */
+#main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon {
+    height: 0;
+    background: transparent;
+}
+
+    #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:before {
+        top: 0;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    #main-menu-state:checked ~ .main-menu-btn .main-menu-btn-icon:after {
+        top: 0;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+/* hide menu state checkbox (keep it visible to screen readers) */
+#main-menu-state {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+    /* hide the menu in mobile view */
+    #main-menu-state:not(:checked) ~ #main-menu {
+        display: none;
+    }
+
+    #main-menu-state:checked ~ #main-menu {
+        display: block;
+    }
+
+@media (min-width: 768px) {
+    /* hide the button in desktop view */
+    .mp主導覽列1 .main-menu-btn {
+        position: absolute;
+        top: -99999px;
+    }
+    /* always show the menu in desktop view */
+    #main-menu-state:not(:checked) ~ #main-menu {
+        display: block;
+    }
+}
+
+/* =====================================================================================*/
+.mp主導覽列1 .sm-blue {
+    background: transparent;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+    .mp主導覽列1 .sm-blue a, .mp主導覽列1 .sm-blue a:hover, .mp主導覽列1 .sm-blue a:focus, .mp主導覽列1 .sm-blue a:active {
+        padding: 10px 20px;
+        /* make room for the toggle button (sub indicator) */
+        padding-right: 58px;
+        background-color: rgb(192,48,69); 
+/*        background-color: rgb(80,80,80);	*/
+
+        background-image: linear-gradient(to bottom, rgb(199,49,72), rgb(130, 7, 7));   
+/*        background-image: linear-gradient(to bottom, rgb(80,80,80), rgb(30,30,30)); 	*/
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 18px;
+        text-decoration: none;
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    }
+
+        .mp主導覽列1 .sm-blue a.current {
+            background-color: rgb(146,0,26);
+            background-image: linear-gradient(to bottom, rgb(135,0,24), rgb(156,0,28));
+            color: #fff;
+        }
+
+        .mp主導覽列1 .sm-blue a.disabled {
+            color: rgb(232,161,171);
+        }
+
+        .mp主導覽列1 .sm-blue a .sub-arrow {
+            position: absolute;
+            top: 50%;
+            margin-top: -17px;
+            left: auto;
+            right: 4px;
+            width: 34px;
+            height: 34px;
+            overflow: hidden;
+            font: bold 16px/34px monospace !important;
+            text-align: center;
+            text-shadow: none;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+            .mp主導覽列1 .sm-blue a .sub-arrow::before {
+                content: '+';
+            }
+
+        .mp主導覽列1 .sm-blue a.highlighted .sub-arrow::before {
+            content: '-';
+        }
+
+    .mp主導覽列1 .sm-blue > li:first-child > a, .mp主導覽列1 .sm-blue > li:first-child > :not(ul) a {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .mp主導覽列1 .sm-blue > li:last-child > a, .mp主導覽列1 .sm-blue > li:last-child > *:not(ul) a, .mp主導覽列1 .sm-blue > li:last-child > ul, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > a, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > *:not(ul) a, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > a, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul {
+        border-radius: 0 0 0px 0px;
+    }
+
+        .mp主導覽列1 .sm-blue > li:last-child > a.highlighted, .mp主導覽列1 .sm-blue > li:last-child > *:not(ul) a.highlighted, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > a.highlighted, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > *:not(ul) a.highlighted, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a.highlighted, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a.highlighted, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > a.highlighted, .mp主導覽列1 .sm-blue > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > ul > li:last-child > *:not(ul) a.highlighted {
+            border-radius: 0;
+        }
+
+    .mp主導覽列1 .sm-blue ul {
+        background: #fff;
+    }
+
+        .mp主導覽列1 .sm-blue ul ul {
+            background: rgba(102, 102, 102, 0.1);
+        }
+
+        .mp主導覽列1 .sm-blue ul a, .mp主導覽列1 .sm-blue ul a:hover, .mp主導覽列1 .sm-blue ul a:focus, .mp主導覽列1 .sm-blue ul a:active {
+            background: transparent;
+            color: rgb(192,48,69);  
+/*            color: rgb(80,80,80);		*/
+            font-size: 16px;
+            text-shadow: none;
+            border-left: 8px solid transparent;
+        }
+
+/* home button and main background */
+            .mp主導覽列1 .sm-blue ul a.current {
+/*                background-color: rgb(146,146,146);
+                background-image: linear-gradient(to bottom, rgb(135,135,135), rgb(156,156,156));		*/
+                background-color: rgb(192,48,69);
+                background-image: linear-gradient(to bottom, rgb(192,48,69), rgb(199,199,199));
+                color: #fff;
+            }
+
+            .mp主導覽列1 .sm-blue ul a.disabled {
+                color: #b3b3b3;
+            }
+
+        .mp主導覽列1 .sm-blue ul ul a,
+        .mp主導覽列1 .sm-blue ul ul a:hover,
+        .mp主導覽列1 .sm-blue ul ul a:focus,
+        .mp主導覽列1 .sm-blue ul ul a:active {
+            border-left: 16px solid transparent;
+        }
+
+        .mp主導覽列1 .sm-blue ul ul ul a,
+        .mp主導覽列1 .sm-blue ul ul ul a:hover,
+        .mp主導覽列1 .sm-blue ul ul ul a:focus,
+        .mp主導覽列1 .sm-blue ul ul ul a:active {
+            border-left: 24px solid transparent;
+        }
+
+        .mp主導覽列1 .sm-blue ul ul ul ul a, .mp主導覽列1 .sm-blue ul ul ul ul a:hover,
+        .mp主導覽列1 .sm-blue ul ul ul ul a:focus,
+        .mp主導覽列1 .sm-blue ul ul ul ul a:active {
+            border-left: 32px solid transparent;
+        }
+
+        .mp主導覽列1 .sm-blue ul ul ul ul ul a,
+        .mp主導覽列1 .sm-blue ul ul ul ul ul a:hover,
+        .mp主導覽列1 .sm-blue ul ul ul ul ul a:focus,
+        .mp主導覽列1 .sm-blue ul ul ul ul ul a:active {
+            border-left: 40px solid transparent;
+        }
+
+        .mp主導覽列1 .sm-blue ul li {
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+            .mp主導覽列1 .sm-blue ul li:first-child {
+                border-top: 0;
+            }
+
+@media (min-width: 768px) {
+    /* Switch to desktop layout
+  -----------------------------------------------
+     These transform the menu tree from collapsible to desktop (navbar + dropdowns)
+  -----------------------------------------------*/
+    /* start... (it's not recommended editing these rules) */
+    .mp主導覽列1 .sm-blue ul {
+        position: absolute;
+        width: 12em;
+    }
+
+    .mp主導覽列1 .sm-blue li {
+        float: left;
+    }
+
+    .mp主導覽列1 .sm-blue ul li {
+        float: none;
+    }
+
+    .mp主導覽列1 .sm-blue a {
+        white-space: nowrap;
+    }
+
+    .mp主導覽列1 .sm-blue ul a {
+        white-space: normal;
+    }
+
+    .mp主導覽列1 .sm-blue .sm-nowrap > li > a, .mp主導覽列1 .sm-blue .sm-nowrap > li > :not(ul) a {
+        white-space: nowrap;
+    }
+    /* ...end */
+
+/* main menu background */
+    .mp主導覽列1 .sm-blue {
+        background-color: rgb(192,49,72);
+        background-image: linear-gradient(to bottom, rgb(156,0,28), rgb(135, 0, 24));
+        border-radius: 8px 8px 0 0;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    }
+
+/* main menu color */
+        .mp主導覽列1 .sm-blue a, .mp主導覽列1 .sm-blue a:hover, .mp主導覽列1 .sm-blue a:focus, .mp主導覽列1 .sm-blue a:active, .mp主導覽列1 .sm-blue a.highlighted {
+            padding: 13px 24px;
+/*            background-color: rgb(192,48,69); 
+            background-color: rgb(80,80,80);	
+            background-image: linear-gradient(to bottom, rgb(192,48,69), rgb(84,21,30));	*/
+                        background-color: rgb(199,49,72); 
+                        background-image: linear-gradient(to bottom, rgb(199,49,72), rgb(135,0,24));  
+
+            color: #fff;
+        }
+
+/*  main menu selected */
+            .mp主導覽列1 .sm-blue a:hover, .mp主導覽列1 .sm-blue a:focus, .mp主導覽列1 .sm-blue a:active, .mp主導覽列1 .sm-blue a.highlighted {
+                background-color: rgb(184,46,66);
+                background-image: linear-gradient(to bottom, rgb(180,45,65), rgb(162,41,59));  
+/*	background-image: linear-gradient(to bottom, rgb(30,30,30), rgb(50,50,50));  */
+            }
+
+            .mp主導覽列1 .sm-blue a.current {
+                background-color: rgb(146,0,26);
+/*                background-image: linear-gradient(to bottom, rgb(135,135,135), rgb(156,156,156));		
+            background-image: linear-gradient(to bottom, rgb(192,48,69), rgb(84,21,30));		*/
+			                        background-image: linear-gradient(to bottom, rgb(199,49,72), rgb(135,0,24));  
+
+
+                color: #fff;
+            }
+
+            .mp主導覽列1 .sm-blue a.disabled {
+                background-color: rgb(192,48,69);
+                background-image: linear-gradient(to bottom, rgb(199,49,72), rgb(184,46,66));
+                color: rgb(232,161,171);
+            }
+
+            .mp主導覽列1 .sm-blue a .sub-arrow {
+                top: auto;
+                margin-top: 0;
+                bottom: 2px;
+                left: 50%;
+                margin-left: -5px;
+                right: auto;
+                width: 0;
+                height: 0;
+                border-width: 5px;
+                border-style: solid dashed dashed dashed;
+                border-color: rgb(232,161,171) transparent transparent transparent;
+                background: transparent;
+                border-radius: 0;
+            }
+
+                .mp主導覽列1 .sm-blue a .sub-arrow::before {
+                    display: none;
+                }
+
+        .mp主導覽列1 .sm-blue > li:first-child > a, .mp主導覽列1 .sm-blue > li:first-child > :not(ul) a {
+            border-radius: 8px 0 0 0;
+        }
+
+        .mp主導覽列1 .sm-blue > li:last-child > a, .mp主導覽列1 .sm-blue > li:last-child > :not(ul) a {
+            border-radius: 0 8px 0 0 !important;
+        }
+
+/*  menu space  */
+        .mp主導覽列1 .sm-blue > li {
+            border-left: 1px solid rgb(162,41,59);  
+/*            border-left: 1px solid rgb(100,100,100);  */
+        }
+
+            .mp主導覽列1 .sm-blue > li:first-child {
+                border-left: 0;
+            }
+
+        .mp主導覽列1 .sm-blue ul {
+            border: 1px solid #a8a8a8;
+            padding: 7px 0;
+            background: #fff;
+            /*彈出menu 漸變色*/
+            /*background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0.3) 80%);*/
+            border-radius: 0 0 4px 4px !important;
+            box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+        }
+
+            .mp主導覽列1 .sm-blue ul ul {
+                border-radius: 4px !important;
+                background: #fff;
+            }
+
+            .mp主導覽列1 .sm-blue ul a, .mp主導覽列1 .sm-blue ul a:hover, .mp主導覽列1 .sm-blue ul a:focus, .mp主導覽列1 .sm-blue ul a:active, .mp主導覽列1 .sm-blue ul a.highlighted {
+                border: 0 !important;
+                padding: 9px 23px;
+                background: transparent;
+                color: rgb(135,0,24);
+                border-radius: 0 !important;
+            }
+
+                .mp主導覽列1 .sm-blue ul a:hover, .mp主導覽列1 .sm-blue ul a:focus, .mp主導覽列1 .sm-blue ul a:active, .mp主導覽列1 .sm-blue ul a.highlighted {
+                    background-color: rgb(192,48,69);  
+/*                    background-color: rgb(80,80,80);	*/
+                    background-image: linear-gradient(to bottom, rgb(199,49,72), rgb(130, 7, 7)
+/*                  background-image: linear-gradient(to bottom, rgb(50,50,50), rgb(80,80,80)	*/
+);
+                    color: #fff;
+                }
+
+
+                .mp主導覽列1 .sm-blue ul a.current {
+                    background-color: rgb(146,0,26);
+                    background-image: linear-gradient(to bottom, rgb(135,0,24), rgb(156,0,28));
+                    color: #fff;
+                }
+
+                .mp主導覽列1 .sm-blue ul a.disabled {
+                    background: #fff;
+                    color: #b3b3b3;
+                }
+
+                .mp主導覽列1 .sm-blue ul a .sub-arrow {
+                    top: 50%;
+                    margin-top: -5px;
+                    bottom: auto;
+                    left: auto;
+                    margin-left: 0;
+                    right: 10px;
+                    border-style: dashed dashed dashed solid;
+                    border-color: transparent transparent transparent rgb(232,161,171);
+                }
+
+            .mp主導覽列1 .sm-blue ul li {
+                border: 0;
+            }
+
+        .mp主導覽列1 .sm-blue .scroll-up,
+        .mp主導覽列1 .sm-blue .scroll-down {
+            position: absolute;
+            display: none;
+            visibility: hidden;
+            overflow: hidden;
+            background: #fff;
+            height: 20px;
+        }
+
+        .mp主導覽列1 .sm-blue .scroll-up-arrow,
+        .mp主導覽列1 .sm-blue .scroll-down-arrow {
+            position: absolute;
+            top: -2px;
+            left: 50%;
+            margin-left: -8px;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+            border-width: 8px;
+            border-style: dashed dashed solid dashed;
+            border-color: transparent transparent rgb(199,49,72) transparent;
+/*          border-color: transparent transparent rgb(70,70,70) transparent;	*/
+
+        }
+
+        .mp主導覽列1 .sm-blue .scroll-down-arrow {
+            top: 6px;
+            border-style: solid dashed dashed dashed;
+
+/*            border-color: rgb(70,70,72) transparent transparent transparent;	*/
+            border-color: rgb(199,49,72) transparent transparent transparent;  
+        }
+}
+
+/* 彈出 menu 的動畫 */
+@media (min-width:768px) {
+    /* prevent text rendering degrade during animation in Mac browsers */
+    #main-menu {
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+        /* show animation */
+        #main-menu ul.show-animation {
+            -webkit-animation: show-animation 0.7s;
+            animation: show-animation 0.7s;
+        }
+
+    @-webkit-keyframes show-animation {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes show-animation {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+    /* hide animation */
+    #main-menu ul.hide-animation {
+        -webkit-animation: hide-animation 0.7s;
+        animation: hide-animation 0.7s;
+    }
+
+    @-webkit-keyframes hide-animation {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @keyframes hide-animation {
+        0% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*Color Variable Start*/
+.mainMenuColors
+{
+--color01 : rgb(192,48,69); /*C*/
+--color02 : rgb(199,49,72); /*C*/
+--color03 : rgb(184,46,66); /*C*/
+--color04 : rgb(232,161,171); /*C*/
+--color05 : rgb(180,45,65); /*C*/
+--color06 : rgb(162,41,59); /*C*/
+--color07 : rgb(146,0,26); /*C*/
+--color08 : rgb(135,0,24); /*C*/
+--color09 : rgb(156,0,28); /*C*/
+--color10 : rgb(229,68,92); /*C*/
+--color11 : rgb(216,108,124); /*C*/
+--color12 : rgb(204,61,82); /*C*/
+--color13 : rgb(232,174,182); /*C*/
+--color14 : rgb(242,46,75); /*C*/
+--color15 : rgb(249,54,84); /*C*/
+}
+/*Color Variable End*/
+
+

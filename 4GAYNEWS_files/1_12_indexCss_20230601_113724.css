@@ -1,0 +1,43 @@
+﻿.indexVirtualCampusTour12 {
+    container-type: inline-size;
+}
+
+    .indexVirtualCampusTour12 .blockTitle {
+    color : #08365b;
+/* 變黑   */
+/*    color : #555555; */
+    }
+
+ 
+
+.blockContent p
+{
+    color : #660000;
+}
+
+ 
+
+.blockContent a
+{
+    color : #08365b;
+}
+
+ 
+
+@media (max-width: 480px) {
+
+ 
+
+}
+@media (min-width: 481px) and (max-width: 767px) {
+
+}
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+@media (min-width: 980px) and (max-width:1199px) {
+
+}
+@media (min-width: 1200px) {
+
+}

@@ -1,0 +1,54 @@
+﻿/* 整個內容方塊 */
+.indexUPCOMINGEVENTS6 {}
+
+    /* 內容方塊標題文字 (h2) */
+    .indexUPCOMINGEVENTS6 .blockTitle {
+    color : #08365b;
+/* 變黑   */
+/*    color : #555555; */
+    }
+/*標題文字*/
+    .indexUPCOMINGEVENTS6 .heading {
+        display : block;
+        font-weight: 700;
+        margin-bottom : 1rem;
+    }
+
+    /*小圖示*/
+    .indexUPCOMINGEVENTS6 .newIcon {
+    }
+
+
+
+.indexUPCOMINGEVENTS6 .details p
+{
+    line-height : 2rem;
+    color : #08365b;
+}
+
+.blockTitle
+{
+    color : #08365b;
+}
+
+.blockContent
+{
+    color : #08365b;
+}
+
+
+@media (max-width: 480px) 
+{
+    .indexUPCOMINGEVENTS6 .blockTitle {
+        font-size : 1.4rem;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    .indexUPCOMINGEVENTS6 .blockTitle {
+        font-size : 1.4rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {}
+@media (min-width: 980px) and (max-width:1199px) {}
+@media (min-width: 1200px) and (max-width:1919px) {}
+@media (min-width: 1920px) {}

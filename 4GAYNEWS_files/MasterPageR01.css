@@ -1,0 +1,80 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    padding: 0;
+    border: none 0;
+    margin: 0;
+}
+
+.mainForm, .fullWidthContainer, .fspsFixedWidthRow, .fspsVerticalMenuPH, .variableContent 
+{
+    border: none 0;
+    padding: 0;
+    margin: 0;
+}
+
+.mcShell
+{
+   min-height : 70vh;
+}
+
+/* When there is no vertical menu */
+.noVerticalMenu .fspsFixedWidthRow {
+    display: block;
+}
+.noVerticalMenu .fspsVerticalMenuPH
+{
+    display : none;
+}
+
+/* Main content in non-index page */
+.isNotIndexPage .variableContent {
+    max-width: 100%;
+}
+
+/* Banner on the right side of vertical main menu */
+.customPageBanner {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border: none 0;
+}
+
+/* Banner above vertical main menu */
+.topBanner01
+{
+    max-width : 100%;
+    height : auto;
+}
+
+.friendlyps {
+    margin: 2rem 0;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+    .friendlyps > div {
+        text-align: center;
+    }
+
+    .friendlyps .powerby {
+        color: #808080;
+    }
+
+    .friendlyps .name {
+        font-weight: 600;
+        text-decoration: none;
+        color: #000000;
+    }
+
+        .friendlyps .name:hover {
+            color: #808080;
+        }
+

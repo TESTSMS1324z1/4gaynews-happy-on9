@@ -1,0 +1,24 @@
+﻿.customPageMenu
+{
+    width : 100%;
+    margin-bottom : 1rem;
+}
+
+    .customPageMenu .cpDynamicHoverStyle {
+    }
+
+    .customPageMenu .cpDynamicMenuItemStyle {
+    }
+
+    .customPageMenu .cpDynamicMenuStyle {
+        z-index: 1;
+    }
+
+    .customPageMenu .cpStaticHoverStyle {
+    }
+
+    .customPageMenu .cpStaticMenuItemStyle {
+    }
+
+    .customPageMenu .cpStaticMenuStyle {
+    }

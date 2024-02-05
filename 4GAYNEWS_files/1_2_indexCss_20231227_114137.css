@@ -1,0 +1,185 @@
+﻿/* 整個內容方塊 */
+.indexNEWS2 {
+    
+}
+
+    /* 內容方塊標題文字 (h2) */ 
+.indexNEWS2 .blockTitle
+{
+    
+}
+.indexNEWS2 .blockTitle a
+{
+    color : #660000;
+/* 變黑   */
+/*    color : #555555;  */
+}
+
+/* 活動容器 */
+.indexNEWS2 .activityList
+{
+    display :flex;
+    flex-direction : row;
+    flex-wrap : wrap;
+    justify-content : space-around;
+}
+
+/*單一活動*/
+.indexNEWS2 .eachActivity {
+    margin : 1em 0;
+    border : solid 1px #dddddd;  /* Change */
+    padding: 1rem;
+    display: block;
+    flex-grow : 1;
+    flex-shrink : 1;
+    background-color : #edecea;
+    position : relative;
+    box-shadow: 1px 2px 4px 0px rgba(0,0,0,0.75);
+}
+
+/*圖片容器*/
+.indexNEWS2 .thumbList
+{
+    display : flex;
+    flex-direction : row;
+    flex-wrap : nowrap;
+    justify-content : space-between;
+    align-items : flex-start;
+    align-content : space-between;
+    margin-bottom : 3rem;
+}
+
+    /*圖片*/
+    .indexNEWS2 .eachActivity .themePic {
+        width : 100%; /* 這是每個圖片佔每個活動的闊度百分比，如果活動顯示多於一個圖片，要修改這個 */
+        height : auto;
+    }
+
+    /*標題超連結*/
+    .indexNEWS2 .eachActivity .heading {
+        font-weight: bold;
+        padding : 1rem;
+        position : absolute;
+        left : 0;
+        bottom : 0;
+        background-color : #ffffff;
+        width : 100%;
+
+  /* 臨時 */
+ color: black; 
+
+    }
+
+
+@media (max-width: 480px) {
+
+.indexNEWS2 .blockTitle
+{
+    font-size : 1.4rem;   
+}
+    .indexNEWS2 .eachActivity {
+        flex-basis : 100%;
+}
+/* 只顯示頭 5 個活動 */
+.indexNEWS2 .activityList .eachActivity
+    {
+display : none;
+}
+    .indexNEWS2 .activityList .eachActivity:nth-child(-n+5)
+    {
+        display : block;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+.indexNEWS2 .blockTitle
+{
+    font-size : 1.4rem;   
+}    
+.indexNEWS2 .eachActivity {
+        flex-basis: calc(100%/2 - 1rem);
+        max-width: calc(100%/2 - 1rem);
+    }
+    /* 只顯示頭 4 個活動 */
+    .indexNEWS2 .activityList .eachActivity
+    {
+        display : none;
+    }
+    .indexNEWS2 .activityList .eachActivity:nth-child(-n+4)
+    {
+        display : block;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px) {
+    .indexNEWS2 .eachActivity {
+        flex-basis: calc(100%/2 - 1rem);
+        max-width: calc(100%/2 - 1rem);
+    }
+    /* 只顯示頭 4 個活動 */
+    .indexNEWS2 .activityList .eachActivity
+    {
+        display : none;
+    }
+    .indexNEWS2 .activityList .eachActivity:nth-child(-n+4)
+    {
+        display : block;
+    }
+}
+@media (min-width: 980px) and (max-width:1199px) {
+
+    .indexNEWS2 .eachActivity {
+        flex-basis: 100;
+        max-width: 100%;
+    }
+
+    /* 只顯示頭 3 個活動 */
+    .indexNEWS2 .activityList .eachActivity
+    {
+        display : none;
+    }
+    .indexNEWS2 .activityList .eachActivity:nth-child(-n+3)
+    {
+        display : block;
+    }
+}
+@media (min-width: 1200px) and (max-width:1599px) 
+{
+    .indexNEWS2 .eachActivity {
+        flex-basis: 100;
+        max-width: 100%;
+    }
+
+    /* 只顯示頭 3 個活動 */
+    .indexNEWS2 .activityList .eachActivity
+    {
+        display : none;
+    }
+    .indexNEWS2 .activityList .eachActivity:nth-child(-n+3)
+    {
+        display : block;
+    }
+}
+}
+@media (min-width: 1600px) and (max-width:1919px)
+{
+.indexNEWS2 .eachActivity {
+        flex-basis: calc(100%/2 - 1rem);
+max-width: calc(100%/2 - 1rem);
+}
+
+    /* 只顯示頭 4 個活動 */
+    .indexNEWS2 .activityList .eachActivity
+    {
+        display : none;
+    }
+    .indexNEWS2 .activityList .eachActivity:nth-child(-n+4)
+    {
+display : block;
+    }
+}
+@media (min-width: 1920px) 
+{
+    .indexNEWS2 .eachActivity {
+        flex-basis: calc(100%/2 - 1rem);
+        max-width: calc(100%/2 - 1rem);
+    }
+}

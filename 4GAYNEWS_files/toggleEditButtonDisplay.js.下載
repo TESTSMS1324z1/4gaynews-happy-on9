@@ -1,0 +1,12 @@
+﻿function toggleEditButtonDisplay() {
+    var allEditIcons = $('.fspsToggleDisplay');
+    allEditIcons.toggleClass("mustNotDisplay");
+
+    var icon = $('#imgToggleEditIcon');
+    if (icon.attr('src') == '/image/image_set_01/symbal/stopEdit.png') {
+        icon.attr('src', '/image/image_set_01/symbal/startEdit.png');
+    }
+    else {
+        icon.attr('src', '/image/image_set_01/symbal/stopEdit.png');
+    }
+}

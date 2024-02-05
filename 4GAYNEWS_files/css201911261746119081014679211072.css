@@ -1,0 +1,43 @@
+﻿.mp學校資料2
+{
+    
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items : baseline;
+    line-height: 2rem;
+    flex-wrap : wrap;
+}
+
+.mp學校資料2 div
+{
+    
+}
+
+    .mp學校資料2 div.copyright {
+        padding-right : 2rem;
+    }
+
+    .mp學校資料2 div.address {
+        padding-right : 2rem;
+    }
+
+    .mp學校資料2 div.phone {
+        padding-right : 2rem;
+    }
+
+    .mp學校資料2 div.fax {
+        padding-right : 2rem;
+    }
+
+    .mp學校資料2 div.email {
+        padding-right : 2rem;
+    }
+
+    .mp學校資料2 div.visitor {
+    }
+
+
+
+
